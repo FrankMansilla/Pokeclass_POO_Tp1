@@ -1,12 +1,10 @@
 from stats import Stats
 from types import Type
 from moves import Moves
-# import logging
+import logging
 
-# def message(): 
-
-#     #configuration
-#     logging.basicConfig(filename='app.log', level='DEBUG')
+#configuration
+logging.basicConfig(filename='logs.POKECLASS_POO_TP1', level=logging.INFO)
 
 #     #test variables
 #     host = 'www.pokeclass.co'
@@ -50,10 +48,10 @@ class Pokemon(Stats, Type, Moves):
 #self.condition = condition
 
     def atributes(self):
-        print("Name: ", self.name)
-        print("Type: ", self.elementalType1)
-        print("Move One: ", self.Move1)
-        print("Stats: ")
+        logging.info("Name: %s", self.name)
+        logging.info("Type: %s", self.elementalType1)
+        logging.info("Move One: %s", self.Move1)
+        logging.info("Stats: ")
         input("HP: ")
         input("attack: ")
         input("defence: ")
